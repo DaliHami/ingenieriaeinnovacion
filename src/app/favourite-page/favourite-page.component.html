@@ -1,0 +1,26 @@
+
+
+<p *ngIf="!imagesFavs.length">No items in your Favorites</p>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+<div class="imageContainer m-2" *ngFor="let imageFav of imagesFavs">
+  <div class="card" style="width: 400px">
+    <img
+    class="card-img-top"
+      src="{{ imageFav.photo }}"
+      alt="Card image"
+      style="width: 100%"
+    />
+    <div class="card-body d-flex justify-content-center flex-column">
+      <h4 class="card-title align-self-center">{{ imageFav.author }}</h4>
+      <p class="card-text align-self-center">{{ imageFav.text }}</p>
+      <button
+        (click)="removefromfavs(imageFav.id)"
+        class="btn btn-danger align-self-center"
+       
+      >Remove From favs</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>

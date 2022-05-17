@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.introContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+h2{
+    position: relative;
+    font-size: 5vw;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.3vw rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+h2::before{
+    font-family: 'Poppins', sans-serif;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    color: #c32a32;
+    -webkit-text-stroke: 0 rgb(130, 57, 199);
+    border-right: 2px solid greenyellow;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+    70%{
+        width: 100%;
+    }
+}
